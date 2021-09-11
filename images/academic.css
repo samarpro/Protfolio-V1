@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Abel&family=Antic+Slab&family=Great+Vibes&family=Grenze+Gotisch:wght@300&family=IBM+Plex+Serif:wght@300&family=Ma+Shan+Zheng&family=Patua+One&family=Rancho&family=Rasa:wght@300&family=Rokkitt&family=Share:ital,wght@1,700&family=Shrikhand&family=Signika:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Antic+Slab&family=Rasa:wght@300&family=Rouge+Script&family=Satisfy&family=Suez+One&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins:ital,wght@1,300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-decoration: none;
+}
+
+html {
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* ----------------designing the top line-------------- */
+
+body #f_page {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.267), rgba(46, 45, 45, 0.479)), url(images/lfsfront.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: slider 250s infinite;
+}
+@keyframes slider {
+    0% {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/lfsfront.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    25% {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/girlsfont.jpg);
+        background-position: top;
+        background-size: cover;
+    }
+    50%{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/stsing.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    75%{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/stingro.png);
+        background-position: top;
+        background-size: cover;
+    }
+    100% {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/football.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+body #f_page .cam1 {
+    overflow-y: hidden;
+    height: max-content;
+    background-color: #940000;
+    color: #ffffff;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+body #f_page .cam1 .img {
+    width: 9vh;
+    max-width: 55px;
+    max-height: 57px;
+    height: 9.7vh;
+    background-image: url(images/cam_uni.png);
+    background-position: center;
+    background-size: cover;
+}
+
+body #f_page .cam1 .text {
+    color: white;
+    font-family: 'Grenze Gotisch', cursive;
+    text-align: center;
+}
+
+#f_page .topline {
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 35vh;
+    overflow: visible;
+}
+
+#f_page .topline .lfs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 230px;
+}
+
+#f_page .topline .lfs .img {
+    background-image: url(images/lfslogo.png);
+    background-size: cover;
+    background-position: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+#f_page .topline .lfs h1 {
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2.6rem;
+    padding: 5px;
+}
+
+#f_page .topline .cam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#f_page .topline .cam .img {
+    width: 5rem;
+    height: 5.7rem;
+    background-image: url(images/cam_uni.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#f_page .topline .cam .text h1 {
+    color: white;
+    font-family: 'Grenze Gotisch', cursive;
+}
+
+#f_page .topline .cam .text h3 {
+    font-family: 'IBM Plex Serif', serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+/*=============================================== designing the nav bar */
+
+#f_page .topline #navbar {
+    overflow-x: visible;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    transition: 1s;
+}
+
+#f_page .topline #navbar #box {
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.397);
+    backdrop-filter: blur( 5.0px);
+    -webkit-backdrop-filter: blur( 5.0px);
+    border-radius: 10px;
+    overflow: visible;
+    transition: 1s;
+}
+
+#f_page .topline #navbar #box ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90vw;
+    height: 9vh;
+    overflow: visible;
+    transition: 1s1;
+}
+
+#f_page .topline #navbar #box ul li>a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-family: 'Signika', sans-serif;
+    font-weight: bolder;
+}
+
+.topline #navbar #box ul li .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 210px;
+    height: auto;
+    z-index: 1;
+}
+
+.topline #navbar #box ul li .dropdown .dropbtn {
+    background-color: transparent;
+    border: 0px;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-family: 'Signika', sans-serif;
+    font-weight: bolder;
+}
+
+.topline #navbar #box ul li .dropdown:hover .dropbtn i {
+    transform: rotate(180deg);
+    transition: 0.3s;
+    color: black;
+}
+
+.topline #navbar #box ul li .dropdown .dropdown-content a {
+    text-decoration: none;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+}
+
+.topline #navbar #box ul li .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur( 10.0px);
+    -webkit-backdrop-filter: blur( 10.0px);
+    background: rgba(255, 255, 255);
+}
+
+#f_page .topline #navbar #box ul li>a:last-child {
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+
+#f_page .main_text {
+    height: 341px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 20px 0px;
+}
+
+#f_page .main_text .text {
+    text-align: left;
+    height: auto;
+    margin-left: 30px;
+}
+
+#f_page .main_text .text h1:nth-child(2) {
+    font-size: 4rem;
+    font-family: 'Share', cursive;
+    /* margin: -20px 0px -10px 0px; */
+    color: black;
+    -webkit-text-fill-color: white;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.4px;
+    -webkit-text-stroke-color: black;
+}
+
+#f_page .main_text .text h1:first-child {
+    font-family: 'Rokkitt', serif;
+    color: yellow;
+    font-size: 1.6rem;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+#secs {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+}
+
+#secs .page {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#secs .page .f1, .f2, .f3, .f4, .f5, .f6 {
+    min-width: 300px;
+    max-width: 95vw;
+    width: 94vw;
+    max-height: 1400px;
+    min-height: 350px;
+    height: auto;
+    margin: 30px 0px 0px 0px;
+    background-color: #860000;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    border-color: #9ecaed;
+    box-shadow: 0px 0 50px #87c4f7;
+
+}
+
+#secs .page .img {
+    background-color: #d1b7b7;
+    max-width: 600px;
+    border-radius: 10px;
+    min-width: 450px;
+    width: 350px;
+    height: 300px;
+}
+
+#secs .page .text {
+    margin: 10px 0px 0px 0px ;
+    max-width: 600px;
+    width: 550px;
+    min-height: 250px;
+    height: auto;
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: 'Signika', sans-serif;
+    font-weight: bolder;
+    color: white;
+    line-height: 25px;
+    text-align: justify;
+    padding: 5px 5px 5px 5px;
+}
+
+#secs .page .text h1 {
+    overflow: hidden;
+    color: yellow;
+}
+
+#secs .page .f4 .img {
+    background-image: url(images/lower.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#secs .page .f1 .img {
+    background-image: url(images/lowe.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#secs .page .f2 .img {
+    background-image: url(images/pre.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#secs .page .f3 .img {
+    background-image: url(images/student4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#secs .page .f5 .img {
+    background-image: url(images/lowerse.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#secs .page .f6 .img {
+    background-image: url(images/girlsfont.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* ----------------------------making responsive---------------------------- */
+
+@media screen and (max-width:635px) {
+    #f_page .main_text .text h1:nth-child(2) {
+        font-size: 11vw;
+    }
+    #f_page .main_text .text h1:first-child {
+        font-size: 5vw;
+    }
+    /* ------------------------------------------------------------------- */
+}
+
+@media screen and (max-width:950px) {
+    .sticky {
+        position: fixed;
+        top: 0;
+        right: 2px;
+    }
+    #f_page .main_text {
+        height: 70vh;
+    }
+    body #f_page {
+        justify-content: space-around;
+        overflow: visible;
+        height: auto;
+    }
+    body #f_page .cam1 {
+        display: flex;
+    }
+    #f_page .topline {
+        justify-content: space-between;
+        height: max-content;
+        margin: 40px 0px 0px 0px;
+    }
+    #f_page .topline .cam {
+        display: none;
+    }
+    .sticky {
+        right: 3px;
+    }
+    /* -------------------------------------- */
+    #f_page .topline #navbar #box ul li>a:last-child {
+        display: block;
+        padding: 14px;
+    }
+    #f_page .topline #navbar {
+        width: max-content;
+    }
+    #f_page .topline #navbar #box ul li {
+        width: auto;
+        /* max-width: 50px;  */
+        min-width: 48px;
+        /* overflow: hidden; */
+        min-height: 48px;
+        height: auto;
+        /* max-width: 400px; */
+    }
+    #f_page .topline #navbar #box ul li>a, .dropdown {
+        display: none;
+    }
+}
+
+/* making responsive websie */
+
+@media screen and (max-width:880px) and (min-width:460px) {
+    #f_page .topline .cam .img {
+        width: 3.3rem;
+        height: 4rem;
+    }
+    #f_page .topline .cam .text h1 {
+        font-size: 3.4vw;
+    }
+    #f_page .topline .cam .text h3 {
+        font-size: 1vw;
+    }
+    #f_page .topline .lfs h1 {
+        font-size: 4.3vw;
+    }
+    #f_page .topline .lfs .img {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media screen and (max-width:460px) {
+    #f_page .topline .cam .img {
+        max-width: 61px;
+        min-width: 45px;
+        max-height: 64px;
+        min-height: 47.5px;
+        width: 12vw;
+        height: 13vw;
+    }
+    #f_page .topline .cam .text h1 {
+        font-size: 5vw;
+    }
+    #f_page .topline .cam .text h3 {
+        font-size: 1vw;
+    }
+    #f_page .topline .lfs h1 {
+        font-size: 6.5vw;
+    }
+    #f_page .topline .lfs .img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}

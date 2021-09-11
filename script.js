@@ -1,0 +1,96 @@
+function myfunctions() {
+    var navbar = document.getElementById("navbar")
+    var as = document.getElementById("aa")
+    var as1 = document.getElementById("aa1")
+    var as2 = document.getElementById("aa2")
+    var as4 = document.getElementById("aa4")
+    var as3 = document.getElementById("aa3")
+    var as5 = document.getElementById("aa5")
+    var as6 = document.getElementById("aa6")
+    var cl = document.getElementById("dropdown1")
+    var cl2 = document.getElementById("dropdown2")
+    var cl3 = document.getElementById("dropdown3")
+    var cl4 = document.getElementById("dropdown4")
+    var bx = document.getElementById("box")
+    var links = document.getElementById("li")
+    navbar.style.position = "absolute";
+    navbar.style.top = "50px";
+    navbar.style.width = "100vw";
+    navbar.style.height = "auto";
+    navbar.style.justifyContent = "flex-end";
+    links.style.width="300px"
+    links.style.flexDirection="column"
+    links.style.alignItems="flex-end"
+    links.style.height="auto"   
+    links.style.transition="1s"
+    as.style.display="block"
+    as.style.margin="10px 20px 0px 0px"
+    as1.style.display="block"
+    as1.style.margin="10px 20px 0px 0px"
+    as2.style.display="block"
+    as2.style.margin="10px 20px 0px 0px"
+    as3.style.display="block"
+    as3.style.margin="10px 20px 0px 0px"
+    as4.style.display="none"
+    as6.style.display="block"
+    as6.style.margin="10px 20px 0px 0px"
+    as6.style.fontSize="1.4rem"
+    as6.style.textAlign="center"
+    cl.style.display="block"
+    cl.style.margin="10px 20px 0px 0px"
+    cl2.style.display="block"
+    cl2.style.margin="10px 20px 0px 0px"
+    cl3.style.display="block"
+    cl3.style.margin="10px 20px 0px 0px"
+    cl4.style.display="block"
+    cl4.style.margin="10px 20px 0px 0px"
+    as5.style.display="block"
+    as5.style.margin="10px 20px 0px 0px"
+
+}
+// -------------------------------------------------------------------
+function myfunctions1(){
+    var navbar = document.getElementById("navbar")
+    var as = document.getElementById("aa")
+    var as1 = document.getElementById("aa1")
+    var as2 = document.getElementById("aa2")
+    var as4 = document.getElementById("aa4")
+    var as3 = document.getElementById("aa3")
+    var as5 = document.getElementById("aa5")
+    var cl = document.getElementById("dropdown1")
+    var cl2 = document.getElementById("dropdown2")
+    var cl3 = document.getElementById("dropdown3")
+    var cl4 = document.getElementById("dropdown4")
+    var bx = document.getElementById("box")
+    var links = document.getElementById("li")
+    var as6 = document.getElementById("aa6")
+    navbar.style.position = "static";
+    navbar.style.width = "max-content";
+    navbar.style.height = "auto";
+    links.style.width="auto"
+    links.style.height="auto"   
+    links.style.transition="1s"
+    as.style.display="none"
+    as.style.margin="10px 20px 0px 0px"
+    as1.style.display="none"
+    as1.style.margin="0px"
+    as2.style.display="none"
+    as2.style.margin="0px"
+    as3.style.display="none"
+    as3.style.margin="0px"
+    as5.style.display="none"
+    as5.style.margin="0px"
+    as6.style.display="none"
+    cl.style.display="none"
+    cl.style.margin="0px"
+    cl2.style.display="none"
+    cl2.style.margin="0px"
+    cl3.style.display="none"
+    cl3.style.margin="0px"
+    cl4.style.display="none"
+    cl4.style.margin="0px"
+    as4.style.display="block"
+    as4.style.margin="0px"
+
+
+}
