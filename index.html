@@ -1,331 +1,196 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little FLower School-Welcome</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/0cddf4db57.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I'm Samarpan</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
 
 <body>
-    <div id="f_page">
-        <div class="cam1">
-            <div class="img"></div>
-            <div class="text">
-                <h3>Cambridge Assessment</h1>
-                <h5>Authorized Center</h3>
-            </div>  
+  <header>
+    <!-- navbar -->
+    <nav>
+      <div class="navbar">
+        <!-- logo -->
+        <div class="logo"></div>
+        <!-- links -->
+        <div class="links">
+          <ul>
+            <li>
+              <a href="#">Home</a>1
+              <a href="#second">Skills</a>
+              <a href="#third">About Me</a>
+              <a href="#">Hire Me</a>
+            </li>
+          </ul>
         </div>
-        <div class="topline">
-            <div class="lfs">
-                <div class="img"></div>
-                <h1>Little FLower School</h1>
-            </div>
-            <div class="cam">
-                <div class="img"></div>
-                <div class="text">
-                    <h1>Cambridge Assessment</h1>
-                    <h3>Authorized Center</h3>
-                </div>
-            </div>
-            <nav id="navbar">
-                <div id="box">
-                    <ul>
-                        <li id="li">
-                            <button id="aa6" href="javascript:void(0);" onclick="myfunctions1()" style="border: 0px; display:none;background-color: transparent;">
-                                <i class="fas fa-times"></i></button>
-                            <a href="index.html" id="aa5">Home</a>
-                            <div class="dropdown" id="dropdown1">
-                                <button class="dropbtn">About Us<i class="fa fa-caret-down"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="principal.html">Message From Principle</a>
-                                    <a href="aims.html">Aims And Objective</a>
-                                    <a href="vision.html">Vision And Mission</a>
-                                </div>
-                            </div>
-                            <div class="dropdown" id="dropdown2">
-                                <button class="dropbtn">Academics<i class="fa fa-caret-down"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="academics.html">Pre-School</a>
-                                    <a href="academics.html">Primary School</a>
-                                    <a href="academics.html">Secondary School</a>
-                                    <a href="academics.html">Higher Secondary School</a>
-                                </div>
-                            </div>
-                            <div class="dropdown" id="dropdown3">
-                                <button class="dropbtn">Admission<i class="fa fa-caret-down"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="adinfo.html">Admission Info</a>
-                                    <a href="require.html">Requirements</a>
-                                    <a href="result1.html">Result</a>
-                                </div>
-                            </div>
-                            <div class="dropdown" id="dropdown4">
-                                <button class="dropbtn">Regulation<i class="fa fa-caret-down"></i></button>
-                                <div class="dropdown-content">
-                                    <a href="rules.html">General Rules</a>
-                                    <a href="uniform.html">School Uniform</a>
-                                    <a href="atten.html">School Fees</a>
-                                    <a href="recommen.html">Recomendation</a>
-                                </div>
-                            </div>
-                            <a id="aa" href="result.html">Result</a>
-                            <a id="aa1" href="exam.html">Examination</a>
-                            <a id="aa2" href="index.html">News</a>
-                            <a id="aa3" href="cantact.html">Contact us</a>
-                            <a id="aa4" href="javascript:void(0);" onclick="myfunctions()">
-                                <i class="fas fa-bars"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="main_text">
-            <div class="text">
-                <h1>Select the best</h1>
-                <h1>Education for your</h1>
-                <h1>Campion</h1>
-                <a href="#">ENROLL NOW <i class="fas fa-long-arrow-alt-right"></i></a>
-            </div>
-        </div>
+      </div>
+    </nav>
+    <!--title content -->
+    <div class="title">
+      <!-- main title -->==
+      <h1>Hi, I'm Samarpan</h1>
+      <!-- main animation -->
+      <p>I'm <span class="typing"></span></p>
+      <!-- adding button -->
+      <a href=""> <button type="button">Hire Me</button></a>
     </div>
-    <!-- --------------------------------------------------------------------------------------------- -->
-    <div id="sec">
-        <h1>Our Academic Program</h1>
-        <div class="cards">
-            <div class="c1">
-                <p>Pre-Primary Section</p>
-                <a href="academics.html" style="line-height: 180px;
-">READ MORE</a>
+    <!-- link for the fa fa icons -->
+    <script src="https://kit.fontawesome.com/0cddf4db57.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </header>
+  <!-- Second page starts from here -->
+  <main>
+    <div id="second">
+      <div class="heading">
+        <h1>My Skills</h1>
+        <!-- button to run the animation -->
+        <button type="button" onclick="slider()">See My Skills</button>
+      </div>
+      <!-- --------------------slider code starts------------------ -->
+      <div class="slider">
+        <div class="bar">
+          <!-- first bar-->
+          <div class="slider1">
+            <h1>HTML <i class="fa fa-html5"></i></h1>
+            <div class="inbar1">
+              <div id="line1"></div>
             </div>
-            <div class="c2">
-                <p>Primary Section</p>
-                <a href="academics.html" style="line-height: 250px;
-">READ MORE</a>
+          </div>
+          <!-- second bar -->
+          <div class="slider2">
+            <h1>CSS <i class="fa fa-css3"></i></h1>
+            <div class="inbar2">
+              <div id="line2"></div>
             </div>
-            <div class="c3">
-                <p>Lower-Secondary Section</p>
-                <a href="academics.html" style="line-height: 160px;
-">READ MORE</a>
+          </div>
+          <!-- third bar -->
+          <div class="slider3">
+            <h1>Javascript <i class="fab fa-js"></i></h1>
+            <div class="inbar3">
+              <div id="line3"></div>
             </div>
-            <div class="c4">
-                <p>Secondary Level</p>
-                <a href="academics.html" style="line-height: 240px;
-">READ MORE</a>
+          </div>
+          <!-- fourth bar -->
+          <div class="slider4">
+            <h1>Python <i class="fab fa-python"></i></h1>
+            <div class="inbar4">
+              <div id="line4"></div>
             </div>
+          </div>
+          <!-- fifth bar -->
+          <div class="slider5">
+            <h1>PHP <i class="fab fa-php"></i></h1>
+            <div class="inbar5">
+              <div id="line5"></div>
+            </div>
+          </div>
+          <div class="slider6">
+            <h1>JAVA <i class="fab fa-java"></i></h1>
+            <div class="inbar6">
+              <div id="line6"></div>
+            </div>
+          </div>
+          <div class="showmore">
+            <a href="#">Show More</a>
+          </div>
         </div>
+      </div>
+      <!-- all the bar ends -->
     </div>
-    <!-- ------------------------------------------------------------------------------------------- -->
-    <div class="add">
-        <div class="scr">
-            <div class="imgs">
-                <div class="img"></div>
-                <div class="img1"></div>
-            </div>
-            <div class="tex">
-                <h4>About LFS</h4>
-                <h1>WHY CHOOSE US?</h1>
-                <p>Established two decades ago, Little Flower School is a fast developing institution with an amazing
-                    growth statistics. It has changed the way knowledge is imparted by ever setting higher standards of
-                    quality education accompanied by intelligent innovations. Along with intellectual pursuit, we also
-                    inculcate high moral and ethical qualities in the students and thereby making them well disciplined
-                    and responsible persons in the family, society, and in the nation at large. The School aims at the
-                    integral development of every child to make him/her committed to the service of God and of Nepal,
-                    instilling in him/her a spirit of compassion, dedication to duty, love for fellowmen and a thirst
-                    for wisdom and excellence. Students are also taught to respect the cultural heritage of Nepal. The
-                    school will take every effort to form the students to be loyal and committed citizens of Nepal
-                    enabling them to render efficient and excellent service to the nation and fellowmen.</p>
-            </div>
+    <!-- ----------------------third page starts from here------------------------ -->
+    <div id="third">
+      <div class="heading_t">About Me</div>
+      <div class="main_t">
+        <div class="imgs"></div>
+        <div class="text_t">
+             <h1>Hi there, My name is Samarpan Gupta. I am a High
+            School student who is very passionate about solving
+            your problem using my Skills. Since my childhood,
+            I had been known as a GPS.Hmm, Not the one you are
+            thinking. It stands for Great Problem Solver.
+            Though I am a high school student, I am pretty good
+            at Web Development, Content Management, Software
+            Development, and Digital Marketing. It's been a long
+            time since I started and to date, I have worked on
+            many real-world projects.</h1>       
         </div>
+          <div class="hire">
+          <h1>Hire Me On</h1>  
+          <a href="#"><button class="fb" type="button">Upwork</button></a>
+          <a href="#"><button class="sb" type="button">Freelancer</button>
+          </a> 
+        </div>
+      </div>
     </div>
-    <!-- ------------------------------------------------------------------------------------------->
-    <div id="trd">
-        <div class="top">
-            <div class="box1">
-
-                <h1><i class="fas fa-book-reader"></i>Apply for Admission</h1>
-                <h2>From Nursery to Grade 12</h2>
-                <a href="#">Enroll Now <i class="fas fa-long-arrow-alt-right"></i></a>
-
-            </div>
-            <div class="box2">
-
-                <h1><i class="fas fa-book"></i>Book List 2077</h1>
-                <h3>For All Classess</h3>
-                <a href="#">View All <i class="fas fa-long-arrow-alt-right"></i></a>
-            </div>
-
-            <div class="box3">
-
-                <h1>News and Events</h1>
-                <h3>Recent News</h3>
-                <a href="#news">View All <i class="fas fa-long-arrow-alt-right"></i></a>
-
-            </div>
+    <!-- third page end here -->
+    <!-- fourth page starts here -->
+    <div id="review">
+      <div class="text">Testimonials</div>
+      <!-- making cirlce -->
+      <div class="box">
+        <div class="frev1">
+          <div class="img"></div>
+          <div class="text1"><p>It is not every day that you come across a passionate and trustworthy Web Developer. Samarpan is a True 
+            professional who does his work really well. <br>Thanks Samarpan!</p></div>
         </div>
-        <div class="bottom">
-            <div class="in">
-                <div class="img"></div>
-                <div class="text">
-                    <h1>NEED <span>COUNSELLING</span> !</h1>
-                    <br>
-                    <h3>FEEL FREE TO CONTACT US ANYWHERE ANYTIME.</h3>
-                    <br><br>
-                    <a href="cantact.html">CONTACT US <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-            </div>
+        <div class="frev2">
+          <div class="img"></div>
+          <div class="text1"><p>Samarpan did a fantastic job.His knowledge 
+            in Web Development is out of the box and his creative Web Design
+            is fabulous.It was a really Good time working with Samarpan.
+          <br>Thanks Samarpan!</p>
+          </div>
         </div>
+        <div class="frev3">
+          <div class="img"></div>
+          <div class="text1">Samarpan did a great work on my project. His Hardwork and Determination is very clearly reflected in my project.If you have some web project than i would highly recommend to work with Samarpan.</div>
+        </div>
+      </div>
     </div>
-    <div id="frt">
-        <div class="alumni">
-            <div class="text">
-                <h3>LFS</h3>
-                <h1>Alumni <span>Testimonials</span></h1>
-                <div class="frame">
-                    <div class="imgso"></div>
-                    <div class="name">DakhaTopi</div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quas eius quidem.
-                        Doloremque asperiores deserunt tenetur ea recusandae ullam cupiditate quidem repellendus itaque
-                        consequatur impedit, est placeat voluptates illo? Ab!</div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
+  </main>
+  <!-- -------------------Footer starts from here1 -->
+  <footer>
+    <a href="#" class="name"><h1 >Samarpan</h1></a>
+    <div class="fandc">
+      <div class="f">
+        <div class="tetx"><h1>Follow Me</h1></div>
+        <div class="icons">
+          <h1><a><i class="fab fa-facebook-f fa-2x"></a></i></h1>
+          <h1><a><i class="fab fa-github fa-2x"></a></i></h1>
+          <h1><a><i class="fab fa-instagram fa-2x"></a></i></h1>
+          <h1><a><i class="fab fa-linkedin-in fa-2x"></a></i></h1>
         </div>
-        <div class="img">
-            <div class="text"><i class="fas fa-user-graduate"></i>The Best School of the district on the basis of
-                SEE Exam. </div>
-        </div>
+      </div>
+      <div class="c">
+        <div class="text"><h1>Contact Me</h1></div>
+        <h2><i class="fas fa-envelope-square fa-2x"></i> <a href="mailto:samarpangupta123@gmail.com?subject=feedback" "email me">samarpangupta123@gmail.com</a></h2>
+      </div>
     </div>
-    <div id="team">
-        <h1>MANAGEMENT TEAM</h1>
-        <div class="frame">
-            <div class="cards">
-                <img src="images/bogati.jpg" alt="image">
-                <h2> Fr. Krishna Bahadur Bogati</h2>
-                <h5> President,LF Society</h5>
-            </div>
-            <div class="cards">
-                <img src="images/prici.jpg" alt="image">
-                <h2>Fr.Roby CST</h2>
-                <h5>Principal,LFS</h5>
-            </div>
-            <div class="cards">
-                <img src="images/jawarhal.jpg" alt="image">
-                <h2>Mr.Jawaharlal Pradhan</h2>
-                <h5>President,Managing Committee</h5>
-            </div>
-            <div class="cards">
-                <img src="images/chun narayan.jpg" alt="image">
-                <h2>Mr.Chun Narayan Shrestha</h2>
-                <h5>President,PTA</h5>
-            </div>
-            <div class="cards">
-                <img src="images/krishna.jpg" alt="image">
-                <h2>Mr.Krishna Dhakal</h2>
-                <h5>Yet to be written</h5>
-            </div>
-            <div class="cards">
-                <img src="images/dhungana.jpg" alt="image">
-                <h2>Mr.Nawaraj Dhungana</h2>
-                <h5>Secretary, PTA</h5>
-            </div>
-            <div class="cards">
-                <img src="images/govinda.jpg" alt="image">
-                <h2>Mr.Govinda Poudel</h2>
-                <h5>Public Service Officer</h5>
-            </div>
-        </div>
+    <div class="copywrite">
+      <h2><i class="fa fa-copyright" aria-hidden="true"></i>ALL RIGHT RESERVED 2021. SAMARPAN GUPTA.</h2>      
     </div>
-    </div>
-    <div id="news">
-        <div class="text">
-            <h2>Recent</h2>
-            <h1>News and Events</h1>
-        </div>
-        <div class="news">
-            <div class="n1"><img src="images/+2.jpg" alt="+2 Admission Open"></div>
-            <div class="n2"><img src="images/guru.jpg" alt="Happy Guru Purnima"></div>
-            <div class="n3"><img src="images/eid.jpg" alt="Eid Mubarak"></div>
-        </div>
-    </div>
-    <!-- ------------------------------------------------------------------------ -->
-    <footer>
-        <div class="img">
-            <div class="imgs"></div>
-        </div>
-        <div class="cards">
-            <div class="ab">
-                <h1>Little Flower School</h1>
-                <h2>LFS is an English Medium School established
-                    on Jan. 17, 1994 under the Nepal Little Flower
-                    Society (Regd. No. 742/053/54) and directly
-                    governed and administered by the Fathers of
-                    Little Flower Congregation.</h2>
-                <div class="icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="link">
-                <h1>Navigation Link</h1>
-                <a href="index.html">Home</a>
-                <a href="">About us</a>
-                <a href="#">Admission</a>
-                <a href="#">Our Team</a>
-                <a href="#">Contact us</a>
-                <a href="#">News and Events</a>
-
-            </div>
-            <div class="adds">
-                <h1>Get In Touch</h1>
-                <div class="head1">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h2 style="font-family: 'Patrick Hand', cursive;">Address</h2>
-                    <h3>Baraghare,Chitwan</h3>
-                </div>
-                <div class="head2">
-                    <i class="fas fa-phone"></i>
-                    <h2 style="font-family: 'Patrick Hand', cursive;">Phone</h2>
-                    <h3>056-570172</h3>
-                </div>
-                <div class="head3">
-                    <i class="fas fa-envelope-open-text"></i>
-                    <h2 style="font-family: 'Patrick Hand', cursive;">Mail</h2>
-                    <h3><a href="mailto:lfsngtnp@gmail.com">lfsngtnp@gmail.com</a></h3>
-                </div>
-            </div>
-
-        </div>
-        <div class="copy">
-            Copyright © 2020 | Ankuram Academy- All Rights Reserved.
-        </div>
-    </footer>
-    <!-- //////////////////////////////////////////////////////////////////////////// -->
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("box");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
+  </footer>
+  <!-- javascript of title animation -->
+  <script src="typed.js"></script>
+  <script>
+    var typed = new Typed('.typing', {
+      strings: ["Web Developer",
+        "Pythoneer",
+        "Web Designer",
+        "Software Developer",
+        "ML Enthusiast"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true,
+    });
+  </script>
 </body>
 
 </html>
+
+  <!-- Photo by <a href="https://unsplash.com/@miracletwentyone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joseph Gonzalez</a> on <a href="https://unsplash.com/s/photos/portrait?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   -->
