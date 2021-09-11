@@ -1,1287 +1,913 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Abel&family=Antic+Slab&family=Great+Vibes&family=Grenze+Gotisch:wght@300&family=IBM+Plex+Serif:wght@300&family=Ma+Shan+Zheng&family=Patua+One&family=Rancho&family=Rasa:wght@300&family=Rokkitt&family=Share:ital,wght@1,700&family=Shrikhand&family=Signika:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Antic+Slab&family=Rasa:wght@300&family=Rouge+Script&family=Satisfy&family=Suez+One&family=Teko&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Antic+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+/* .frev1,.frev2,.frev3{Importing
+} all the necessary stuff from internet */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Poppins:ital,wght@1,300&family=Zen+Loop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
+/* --------------------------------------actuall code begins----------------------------------------------- */
+:root{
+    --font: 'Encode Sans SC', sans-serif;
+    --font1: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 10px;
     overflow-x: hidden;
-    text-decoration: none;
-}
-
-html {
-    overflow-x: hidden;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-}
-
-html::-webkit-scrollbar {
-    display: none;
-}
-
-/* ----------------designing the top line-------------- */
-
-body #f_page {
+    scroll-behavior: smooth;
     width: 100vw;
+}
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}/*------------------------------------------------------------nav bar code--------------------------------------------------------------*/
+header{
     height: 100vh;
-    max-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/lfsfront.jpg);
+    width: 100vw;
+    background-image: url(images/plant_bac.jpg);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    clip-path: polygon(0% 0% , 100% 0% , 100% 80%  , 0% 100% );
+}
+header nav .navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav .navbar .links ul li {
+    list-style: none;
+}
+header nav .navbar .links ul li a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 1.5rem;
+    padding: 0.6rem;
+    font-family: var(--font1); 
+    position: relative;
+}
+/*addin hover effect in the links*/
+header nav .navbar .links ul li a::before{
+    position: absolute;
+    width: 0%; 
+    transition: 1s;
+    height: 100%;
+    left:  0;
+    top: 0;
+    content: "";
+    border-bottom: 2px solid white;
+    z-index: 2;
+}
+header nav .navbar .links ul li a:hover::before{
+    width: 100%;
+    border-bottom: 2px solid green;
+}
+/* styling the last link */
+header nav .navbar .links ul li a:last-child{
+    background-image: -moz-linear-gradient(to left, #2193b0 , #6dd5ed);
+    background-image: -webkit-linear-gradient(to left, #2193b0 , #6dd5ed);
+  background-image: linear-gradient(to left, #2193b0 , #6dd5ed);
+    border-radius: 1rem;
+    color: white;
+}
+/*---------------------------------------------------logo code------------------------------------------------*/
+header nav .navbar .logo{
+    width: 5rem;
+    height: 5rem;
+    background-image: url(images/front_pic.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+/*--------------------------------------nav bar ends---------------------------------------------------------*/
+/* main content starts from here */
+header .title{
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: slider 250s infinite;
-}
-/* this needs */
-@keyframes slider {
-    0% {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/lfsfront.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    25% {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/girlsfont.jpg);
-        background-position: top;
-        background-size: cover;
-    }
-    50%{
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/stsing.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    75%{
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/stingro.png);
-        background-position: top;
-        background-size: cover;
-    }
-    100% {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.363), rgba(255, 255, 255, 0.068)), url(images/football.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-}
-
-body #f_page .cam1 {
-    overflow-y: hidden;
-    height: max-content;
-    min-height: 60px;
-    background-color: #940000;
-    color: #ffffff;
-    width: 100vw;
-    display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
-}
-
-body #f_page .cam1 .img {
-    width: 9vh;
-    max-width: 55px;
-    max-height: 57px;
-    height: 9.7vh;
-    background-image: url(images/cam_uni.png);
-    background-position: center;
-    background-size: cover;
-}
-
-body #f_page .cam1 .text {
-    color: white;
-    font-family: 'Grenze Gotisch', cursive;
-    text-align: center;
-}
-
-#f_page .topline {
-    height: max-content;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: 35vh;
-    overflow: visible;
-}
-
-#f_page .topline .lfs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 230px;
-}
-
-#f_page .topline .lfs .img {
-    background-image: url(images/lfslogo.png);
-    background-size: cover;
-    background-position: center;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-}
-
-#f_page .topline .lfs h1 {
-    font-family: 'Great Vibes', cursive;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 2.6rem;
-    padding: 5px;
-}
-
-#f_page .topline .cam {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#f_page .topline .cam .img {
-    width: 5rem;
-    height: 5.7rem;
-    background-image: url(images/cam_uni.png);
-    background-position: center;
-    background-size: cover;
-}
-
-#f_page .topline .cam .text h1 {
-    color: white;
-    font-family: 'Grenze Gotisch', cursive;
-}
-
-#f_page .topline .cam .text h3 {
-    font-family: 'IBM Plex Serif', serif;
     color: aliceblue;
     text-align: center;
 }
-
-/*=============================================== designing the nav bar */
-
-#f_page .topline #navbar {
-    overflow-x: visible;
+/* main title */
+header .title h1{
+    font-size: 4rem;
+    font-family: var(--font);
+    /* -------------------------------font to be applied here---------- */
+}
+header .title p{
+    font-size: 2.5rem;
+}
+header .title p span{
+    color: rgb(252, 227, 0);
+    font-family: var(--font1);
+    font-weight: bolder;
+}
+/* button code */
+header .title button{
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    border: 0rem;
+    color: black;
+    background-color:#00ff6a;
+}
+header .title button:hover{
+    box-shadow: 0 5px 15px rgb(0, 255, 76);
+    color: white;
+}
+/*----------------------------------------------------------- second page styling (Skill page)---------------------------------------------*/
+main #second{
     width: 100vw;
+    height: auto;
+    background-image: -moz-linear-gradient(#00b4db,#0083b0);
+    background-image: -webkit-linear-gradient(#00b4db,#0083b0);
+    color: aliceblue;
+}
+/* designing the title of the second page*/
+main #second .heading{
+    text-align: center;
+    font-family: var(--font);
+}
+main #second .heading h1{
+    font-size: 5rem;
+}
+/* making show skill button */
+main #second .heading button{
+    border: 0px;
+    padding: 1rem;
+    background-color: #fc036b;
+    color: white;
+    transition: 0.5s;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -ms-transition: 0.5s;
+    font-size: 1.5rem;
+}
+/* making button hover effect */
+main #second .heading button:hover{
+    font-size: 1.7rem;    
+    border-radius: 3rem;
+    background-color: #00ff6a;
+    color: black;
+    box-shadow: 2px 5px 15px rgb(0, 255, 13);
+}
+/* ------------------main slider div--------------------*/
+main #second .slider{
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: visible;
-    transition: 1s;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: auto;
 }
-
-#f_page .topline #navbar #box {
-    background: rgba( 255, 255, 255, 0.25);
-    box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.397);
-    backdrop-filter: blur( 5.0px);
-    -webkit-backdrop-filter: blur( 5.0px);
-    border-radius: 10px;
-    overflow: visible;
-    transition: 1s;
+/*child number 1 and only of slider div */
+main #second .slider .bar{
+    width: 90vw;
+    height: auto;
 }
-
-#f_page .topline #navbar #box ul li {
-    list-style: none;
+/* heading of the slider */
+main #second .slider .bar .slider1,.slider2,.slider3,.slider4,.slider5,.slider6{
+    margin-top: 1rem;
+}
+/* making place for the actual slider */
+main #second>.slider>.bar .slider1 .inbar1 ,.slider2 .inbar2,.slider4 .inbar4,.slider3 .inbar3,.slider5 .inbar5,.slider6 .inbar6{
+    width: 100%;
+    height: 3vh;
+    background-color: #ffffff;
+    border-radius: 0.9rem;
+    margin-top: 1rem;
+}
+/* for those actual slider line */
+main #line1,#line2,#line3,#line4,#line5,#line6{
+    width: 5%;
+    height: 100%;
+    background-color: #023b5e;
+    border-radius: 0.9rem;
+}
+/* styling the show more link */
+main #second .slider .bar .showmore{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+main #second .slider .bar .showmore a{
+    text-decoration: none;
+    background-color: rgb(0, 255, 128);
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    border-radius: 2rem;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -ms-transition: 0.5s;
+    margin-bottom: 1rem;
+}
+main #second .slider .bar .showmore a:hover{
+    color: black;
+    background-color: deeppink;
+    border-radius: 1rem;
+    box-shadow: 2px 5px 15px rgb(136, 1, 148);
+}
+/* -----------------about me page begins from here----------- */
+main #third{
+    width: 100vw;
+    height: max-content;
+    overflow: hidden;
+    background: linear-gradient(45deg, #e8f74d, #ff6600d9, #00ff66, #13ff13, #ad27ad, #bd2681, #6512b9, #ff3300de, #5aabde);
+    background-size: 400%;
+    animation: glower1 20s linear infinite;
+    z-index: -4;
+}
+@keyframes glower1 {
+  0% {
+    background-position: 0 0;
+  }
+  
+  50% {
+    background-position: 400% 0;
+  }
+  
+  100% {
+    background-position: 0 0;
+  }
+}
+/* third page heading styling */
+main #third .heading_t{
+    font-size: 5rem;
+    font-family: var(--font);
+    text-align: center;
+    color: white;
+}
+main #third .main_t{
+    width: 100vw;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: -2;
+    overflow: hidden;
+}
+main #third .main_t .imgs{
+    width: 50vh;
+    margin-top: 2vh;
+    height: 50vh;
+    background-image: linear-gradient(to right bottom, #2bff63, #00eca0, #00b9ce, #00b9ce, #239dbe);;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 15px 35px rgb(0, 0, 0,0.2);
+    backdrop-filter: blur(5px);
+}
+
+main #third .main_t .imgs::after{
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/front_pic.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+}
+main #third .main_t .text_t{
+    color: white;
+    width: 90%;
+    height: fit-content;
+    text-align: center;
+    position: relative;
+    font-size:2.5vw;
+    z-index: 90;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 15px 35px rgb(0, 0, 0,0.2);
+    overflow: hidden;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+/*for second button*/
+
+main #third .main_t .hire{
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    margin-bottom: 4vh;
+}
+main #third .main_t .hire h1{
+    font-size: 3rem;
+    font-family: var(--font);
+    color: whitesmoke;
+}
+main #third .main_t .hire .fb ,.sb{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 1vh;
+    color: white;
+    border-radius: 20px;
+    border: 0px;
+    background-color: ;
+}
+main #third .main_t .hire .fb{
+    position: relative;
+    z-index:1; 
+    overflow: hidden;
+    background-color: transparent;
+    transition: 0.7s ;
+}
+main #third .main_t .hire .fb::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, black, #444444);
+    transition: 0.7s ease-out;
+
+
+}
+main #third .main_t .hire .fb:hover::before{
+    left: 100%;
+    overflow: hidden;
+
+}
+/*text color change*/
+main #third .main_t .hire .fb:hover{
+    color: black;
+    text-shadow: 7px 5px 8px white;
+}
+/*second button code*/
+main #third .main_t .hire .sb{
+    position: relative;
+    z-index:1; 
+    overflow: hidden;
+    background-color: transparent;
+    transition: 0.7s ;
+}
+main #third .main_t .hire .sb::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, black, #444444);
+    transition: 0.7s ease-out;
+
+
+}
+main #third .main_t .hire .sb:hover::before{
+    right: 100%;
+    overflow: hidden;
+
+}
+/*text color change*/
+main #third .main_t .hire .sb:hover{
+    color: black;
+    text-shadow: 7px 5px 8px white;
+}
+/* ------------------------------------fourth page starts from here----------- */
+main #review{
+    width: 100vw;
+    height: auto;
+    background-color: #161623;
+    position: relative;
+    z-index: -3;
+}
+main #review .text{
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    font-family: var(--font);
+    z-index: 100;
+}
+
+main #review .box{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 95vw;
-    height: auto;
-    overflow: visible;
-    transition: 1s;
-}
 
-#f_page .topline #navbar #box ul li>a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 1.2rem;
-    font-family: 'Signika', sans-serif;
-    font-weight: bolder;
-    padding: 16px 10px 15px 10px;
-    transition: 0.4s;
-    background-color: transparent;
 }
-
-#f_page .topline #navbar #box ul li>a:hover {
-    background-color: rgb(177, 2, 32);
-    color: white;
-}
-
-.topline #navbar #box ul li .dropdown button {
-    padding: 15px 10px 15px 10px;
-    transition: 0.3s;
-}
-
-.topline #navbar #box ul li .dropdown:hover button {
-    background-color: rgb(177, 2, 32);
-    color: white;
-}
-
-.topline #navbar #box ul li .dropdown .dropdown-content {
-    display: none;
+main #review .box::after{
+    content: "";
     position: absolute;
-    width: 210px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(20% at right 70%);
+    z-index: -1;
+}
+main #review .box::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 81, 255), #f0f);
+    clip-path: circle(20% at 10% 10%);
+    z-index: -1;
+}
+main #review .box .frev1,.frev2, .frev3{
+    margin: 10vh 2vh;    
+    width: 60vh;
+    height: 70vh;
+    position: relative;
+    z-index: 80;
+    box-shadow: 0px 15px 35px rgb(0, 0, 0,0.2);
+    border-radius: 2rem;
+
+}
+/* bluring effect */
+main #review .box .frev1::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    z-index: 79;
+}
+/* adding images and text */
+main #review .box .frev1 .img{
+    position: absolute;
+    z-index: 2;
+    width: 45%;
+    height: 40%;
+    background-image: url(images/shreemon.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 27.5%;
+    border-radius: 50%;z-index: 81;
+}
+main #review .box .frev1 .text1{
+    position: absolute;
+    font-size:3vh;
+    width: 100%;
+    height: 55%;
+    top: 45%;
+    text-align: center;
+    color: white;
+    z-index: 80;
+}
+/*second card*/
+main #review .box .frev2::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    z-index: 79;
+}
+main #review .box .frev2 .img{
+    position: absolute;
+    z-index: 2;
+    width: 45%;
+    height: 40%;
+    background-image: url(images/shital.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 27.5%;
+    border-radius: 50%;z-index: 81;
+}
+main #review .box .frev2 .text1{
+    position: absolute;
+    font-size: 3vh;
+    width: 100%;
+    height: 55%;
+    top: 45%;
+    text-align: center;
+    color: white;
+    z-index: 80;
+
+}
+/*third button code*/
+main #review .box .frev3::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 2rem;
+    z-index: 79;
+}
+main #review .box .frev3 .img{
+    position: absolute;
+    z-index: 2;
+    width: 45%;
+    height: 40%;
+    background-image: url(images/chetan.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 27.5%;
+    border-radius: 50%;z-index: 81;
+}
+main #review .box .frev3 .text1{
+    position: absolute;
+    font-size: 3vh;
+    width: 100%;
+    height: 55%;
+    top: 45%;
+    text-align: center;
+    color: white;
+    z-index: 80;
+
+}
+/*---------------------footer starts from here--------------*/
+footer{
+    width: 100vw;
     height: auto;
+    background-color: #383838;
+    color: white;
+}
+/*for the heading in the footer*/
+footer .name{
+    text-decoration:none ;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    font-family: var(--font);
+    pointer: cursor;
+}
+/*main div in footer*/
+footer .fandc{                           /*here is the code */
+    width: 100vw;
+    height: auto;
+    padding-top: 3rem;
+}
+/*div for the follow now*/
+footer .fandc .f{
+    width: 100vw;
+    height: auto;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    border-bottom:1px solid white;
+}
+/*Text in follow me section*/
+footer .fandc .tetx{
+    font-family: var(--font);
+    font-size: 1.5rem;
+}
+/*follow me icons section*/
+footer .fandc .f .icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer .fandc .f .icons h1{
+    padding: 1rem;
+    text-align: center;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
     z-index: 1;
 }
+footer .fandc .f .icons h1 a i{
+    background-color: black;
+    border-radius: 50%;
 
-.topline #navbar #box ul li .dropdown .dropbtn {
-    background-color: transparent;
-    border: 0px;
-    color: rgb(0, 0, 0);
-    font-size: 1.2rem;
-    font-family: 'Signika', sans-serif;
-    font-weight: bolder;
 }
-
-.topline #navbar #box ul li .dropdown:hover .dropbtn i {
-    transform: rotate(180deg);
-    transition: 0.3s;
-    color: white;
-}
-
-.topline #navbar #box ul li .dropdown .dropdown-content a {
-    text-decoration: none;
-    padding: 1rem;
-    color: rgb(0, 0, 0);
-}
-
-.topline #navbar #box ul li .dropdown .dropdown-content a:hover {
-    background-color: rgb(136, 136, 136);
-}
-
-.topline #navbar #box ul li .dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 15px rgb(255, 255, 255);
-    background: rgba(255, 255, 255);
-    border: 1px solid #9F9F9F;
-}
-
-#f_page .topline #navbar #box ul li>a:last-child {
-    display: none;
-}
-
-.sticky {
-    position: fixed;
+footer .fandc .f .icons h1:nth-child(1)::before{
+    position: absolute;
+    content: "";
+    background-color: #7dd1ff;
+    left: 0; 
     top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.4);
+    transition: 0.7s;
+    z-index: -1;
+    box-shadow: 0 0 15px #7dd1ff;
+    filter: blur(10px);
 }
-
-/* ------------------------------------------------------------------------- */
-
-@media screen and (max-width:950px) {
-    .sticky {
-        /* this one */
-        position: fixed;
-        top: 0;
-        right: 2px;
-    }
-    #f_page .main_text {
-        min-height: 70vh;
-        height: 60vh;
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-    }
-    body #f_page {
-        justify-content: space-around;
-        overflow: visible;
-        height: auto;
-    }
-    body #f_page .cam1 {
-        display: flex;
-    }
-    #f_page .topline {
-        justify-content: space-between;
-        height: max-content;
-        margin: 7vh 0px 10px 0px;
-    }
-    #f_page .topline .cam {
-        display: none;
-    }
-    /* -------------------------------------- */
-    #f_page .topline #navbar #box ul li>a:last-child {
-        display: block;
-        padding: 14px;
-    }
-    #f_page .topline #navbar {
-        width: max-content;
-    }
-    #f_page .topline #navbar #box ul li {
-        width: auto;
-        /* max-width: 50px;  */
-        min-width: 38px;
-        /* overflow: hidden; */
-        /* max-height: 55px;  */
-        height: auto;
-        /* max-width: 400px; */
-    }
-    #f_page .topline #navbar #box ul li>a, .dropdown {
-        display: none;
-    }
-    #f_page .topline #navbar #box ul li>a {
-        padding: 5px 10px 5px 10px;
-    }
-    #f_page .topline #navbar #box ul li .dropdown button {
-        padding: 5px 10px 5px 10px;
-    }
-    #f_page .topline #navbar #box ul li .dropdown .dropdown-content {
-        margin-left: -80px;
-    }
+footer .fandc .f .icons h1:nth-child(1):hover::before{
+    transform: scale(1.21);
+    border-radius: 50%;
 }
-
-/* /////////////////////////////////////////////////////////////////////////////////////////// */
-
-#f_page .main_text {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+footer .fandc .f .icons h1:nth-child(1):hover{
+    background-color: #0062ff;
+    color: #0062ff;
+    text-shadow: 0 0 15px #0062ff;
 }
-
-#f_page .main_text .text {
-    text-align: center;
-    height: auto;
-    min-height: 200px;
-    width: 100vw;
-    overflow: hidden;
+/*second one*/
+footer .fandc .f .icons h1:nth-child(2)::before{
+    position: absolute;
+    content: "";
+    background-color: #316cf5;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.4);
+    transition: 0.7s;
+    z-index: -1;
+    box-shadow: 0 0 15px #3ce691;
+    filter: blur(10px);
 }
-
-#f_page .main_text .text h1:nth-child(2) {
-    font-size: 5rem;
-    color: aliceblue;
-    font-family: 'Share', cursive;
-    /* margin: -20px 0px -10px 0px; */
-    color: black;
-    -webkit-text-fill-color: white;
-    /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.4px;
-    -webkit-text-stroke-color: black;
+footer .fandc .f .icons h1:nth-child(2):hover::before{
+    transform: scale(1.21);
+    border-radius: 50%;
 }
-
-#f_page .main_text .text h1:first-child {
-    font-family: 'Rokkitt', serif;
-    color: yellow;
+footer .fandc .f .icons h1:nth-child(2):hover{
+    background-color: #3ce691;
+    color: ;
+    text-shadow: 0 0 15px #3ce691;
 }
-
-#f_page .main_text .text h1:nth-child(3) {
-    font-family: 'Shrikhand', cursive;
-    color: yellow;
-    font-weight: lighter;
-    font-size: 3rem;
+/*third one*/
+footer .fandc .f .icons h1:nth-child(3){
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
 }
-
-#f_page .main_text .text a {
-    margin: 40px 0px 10vh 0px;
-    color: rgb(255, 255, 255);
-    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
-    background-color: rgba(224, 0, 0, 0.863);
-    border: 0px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    font-family: 'Patua One', cursive;
-    text-decoration: none;
-    display: inline-block;
-    transition: 1s;
+footer .fandc .f .icons h1:nth-child(3)::before{
+    position: absolute;
+    content: "";
+    background-color: #e64cc2;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.4);
+    transition: 0.7s;
+    z-index: -1;
+    box-shadow: 0 0 15px #316cf5;
+    filter: blur(12px);
 }
-
-#f_page .main_text .text a:hover {
-    background-color: red;
-    box-shadow: 0px 0px 60px rgb(255, 0, 0);
-    border: 1px solid #a01a1a;
+footer .fandc .f .icons h1:nth-child(3):hover::before{
+    transform: scale(1.21);
+    border-radius: 50%;
 }
-
-#f_page .main_text .text a i {
-    vertical-align: -2px;
+footer .fandc .f .icons h1:nth-child(3):hover{
+    background-color: #e64cc2;
+    color: #ff00a6;
+    text-shadow: 0 0 15px #316cf5;
 }
-
-/* ----------------------------making responsive---------------------------- */
-
-@media screen and (max-width:635px) {
-    #f_page .main_text {
-        align-items: flex-start;
-    }
-    #f_page .main_text .text h1:nth-child(2) {
-        font-size: 12.5vw;
-    }
-    #f_page .main_text .text h1:nth-child(3) {
-        font-size: 7.5vw;
-    }
-    #f_page .main_text .text h1:first-child {
-        font-size: 5vw;
-    }
-    #f_page .main_text .text a {
-        font-size: 3vh;
-    }
+/*fourth one*/
+footer .fandc .f .icons h1:nth-child(4){
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
 }
-
-/* ------------------------------------designing second page---------------------------- */
-
-#sec {
-    margin: 50px 0px 50px 0px;
-    width: 100vw;
-    height: auto;
-    background-color: #ffffff;
+footer .fandc .f .icons h1:nth-child(4)::before{
+    position: absolute;
+    content: "";
+    background-color: #0091ff;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.4);
+    transition: 0.7s;
+    z-index: -1;
+    box-shadow: 0 0 15px #316cf5;
+    filter: blur(10px);
 }
-
-#sec h1 {
-    text-align: center;
-    color: #003A5B;
-    margin: 10px 0px 10px 0px;
-    font-family: 'Rampart One', cursive;
+footer .fandc .f .icons h1:nth-child(4):hover::before{
+    transform: scale(1.21);
+    border-radius: 50%;
 }
-
-#sec .cards {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: auto;
-    flex-wrap: wrap;
-    background-color: #ffffff;
+footer .fandc .f .icons h1:nth-child(4):hover{
+    background-color: #2d4bf7;
+    text-shadow: 0 0 15px #316cf5;
 }
-
-#sec .cards .c1, .c2, .c3, .c4 {
-    width: 17rem;
-    margin: 20px 5px 20px 0px;
-    text-align: center;
-    overflow: hidden;
-    border-radius: 5px;
-    max-height: 800px;
-    min-height: 300px;
-    height: 50vh;
-    transition: 1s;
+/*-----------------designing contact me--------------- */
+footer .fandc .c{
+    padding-top:2vh;
+    padding-bottom:2vh;
+    border-bottom: 1px solid white;
 }
-
-#sec .cards .c1 {
-    background-image: linear-gradient(rgba(97, 7, 200, 0.431), rgba(200, 7, 103, 0.431)), url(images/pre.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+footer  .fandc .c .text{
+    font-size: 1.5rem;
+    font-family: var(--font);
 }
-
-#sec .cards .c1 p {
-    color: white;
+footer  .fandc .c h2{
+    text-align: left;
     font-size: 2rem;
-    margin-top: 20px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bolder;
-}
-
-#sec .cards .c2 {
-    background-image: linear-gradient(rgba(255, 2, 2, 0.424), rgba(255, 158, 2, 0.424)), url(images/lower.jpg);
-    background-position: top;
-    background-size: cover;
-}
-
-#sec .cards .c2 p {
     color: white;
-    font-size: 2rem;
-    margin-top: 20px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bolder;
-}
-
-#sec .cards .c3 {
-    background-image: linear-gradient(rgba(2, 255, 36, 0.424), rgba(2, 255, 200, 0.424)), url(images/lowerse.jpg);
-    background-position: top;
-    background-size: cover;
-}
-
-#sec .cards .c3 p {
-    color: white;
-    font-size: 2rem;
-    margin-top: 20px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bolder;
-}
-
-#sec .cards .c4 {
-    background-image: linear-gradient(rgba(2, 255, 221, 0.424), rgba(19, 2, 255, 0.424)), url(images/sec.jpg);
-    background-position: top;
-    background-size: cover;
-}
-
-#sec .cards .c4 p {
-    color: white;
-    font-size: 2rem;
-    margin-top: 20px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bolder;
-}
-
-#sec .cards .c1 a, .c4 a, .c3 a, .c2 a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    background-color: #C11C56;
-    border-radius: 20px;
-    display: none;
-    box-shadow: 0px 0px 40px crimson;
-}
-
-#sec .cards .c1:hover a {
-    display: inline;
-}
-
-#sec .cards .c2:hover a {
-    display: inline;
-}
-
-#sec .cards .c3:hover a {
-    display: inline;
-}
-
-#sec .cards .c4:hover a {
-    display: inline;
-}
-
-/* ------------------------------------designing add page----------------------------------- */
-
-body .add {
-    width: 100vw;
-    height: auto;
-    background: linear-gradient(122.77deg, rgba(255, 255, 255, 0.61) 38.04%, #FFFFFF 38.04%);
-}
-
-.add .scr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.add .scr .imgs {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.add .scr .imgs .img {
-    background-image: url(images/stread.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: 400px;
-    max-height: 400px;
-    height: 400px;
-    width: 400px;
-    min-width: 300px;
-    min-height: 300px;
-    border-radius: 20px;
-}
-
-.add .scr .imgs .img1 {
-    background-image: url(images/stgread.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 300px;
-    margin-left: -100px;
-    box-sizing: border-box;
-    border: 3px solid white;
-    min-width: 300px;
-    min-width: 300px;
-}
-
-@media screen and (max-width:500px) {
-    .add .scr .imgs {
-        flex-direction: column;
-    }
-    .add .scr .imgs .img1 {
-        margin-left: 0px;
-        margin-top: -50px;
-    }
-}
-
-/* @media screen (max-width:580px){
     
-} */
-
-.add .scr .tex {
-    width: 550px;
-    height: auto;
-    margin-left: 10px;
 }
-
-.add .scr .tex h4 {
-    color: #9F9F9F;
+footer  .fandc .c h2 a{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    
 }
-
-.add .scr .tex h1 {
-    font-family: 'Staatliches', cursive;
-    letter-spacing: 2px;
-    font-size: 3rem;
-}
-
-.add .scr .tex p {
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-/* -------------------------------designing the third page-----------------------------------*/
-
-#trd {
-    width: 100vw;
-    height: auto;
-    background-color: #DFDFDF;
-}
-
-#trd .top {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#trd .top .box1, .box2, .box3 {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 1rem;
-    margin: 2vh 5px;
+footer .fandc .credit{
     text-align: center;
-    color: white;
-}
-#trd .top a {
-    transition: 0.6s;
-}
-#trd .top a:hover {
-    box-shadow: 0px 0px 90px rgb(211, 0, 0);
-    border: 2px solid crimson;
-}
-
-/* --------------------------------------------------------------------------------------------- */
-
-#trd .top .box1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.335)), url(images/admission.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-#trd .top .box1 h1 {
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 1.6rem;
-    margin: 20px 0px 30px 0px;
-    font-weight: lighter;
-}
-
-#trd .top .box1 h1 i {
-    font-size: 2.6rem;
-    vertical-align: bottom;
-    margin-right: 5px;
-}
-
-#trd .top .box1 h2 {
-    font-family: 'Abel', sans-serif;
-    margin: 60px 0px 60px 0px;
-}
-
-#trd .top .box1 a {
-    padding: 7px;
-    border-radius: 10px;
-    border: 0px;
-    font-size: 1.2rem;
-    font-family: 'ABeeZee', sans-serif;
-    background-color: #D82424;
-    color: white;
-    display: inline-block;
-    margin-bottom: 2rem;
-}
-
-#trd .top .box1 a i {
-    vertical-align: middle;
-    font-size: 1.5rem;
-}
-
-/* --------------------------------------------------------------------------- */
-
-#trd .top .box2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.335)), url(images/book.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-#trd .top .box2 h1 {
-    font-family: 'IBM Plex Serif', serif;
-    margin: 20px 0px 0px 0px;
-}
-
-#trd .top .box2 h1 i {
-    font-size: 2.6rem;
-    vertical-align: bottom;
-    margin-right: 10px;
-    color: blue;
-}
-
-#trd .top .box2 h3 {
-    font-family: 'Abel', sans-serif;
-    margin: 60px 0px 60px 0px;
-    font-size: 1.4rem;
-}
-
-#trd .top .box2 a {
-    padding: 7px;
-    border-radius: 10px;
-    border: 0px;
-    font-size: 1.2rem;
-    font-family: 'ABeeZee', sans-serif;
-    background-color: #D82424;
-    color: white;
-    display: inline-block;
-    margin-bottom: 2rem;
-}
-
-#trd .top .box2 a i {
-    vertical-align: middle;
-    font-size: 1.5rem;
-}
-
-/* --------------------------------------------------------------------------------------------- */
-
-#trd .top .box3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(61, 60, 60, 0.335)), url(images/prinspeak.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-#trd .top .box3 h1 {
-    font-family: 'IBM Plex Serif', serif;
-    margin: 20px 0px 0px 0px;
-    font-family: 'Rancho', cursive;
-    font-weight: lighter;
-    font-size: 3rem;
-}
-
-#trd .top .box3 h3 {
-    font-family: 'Abel', sans-serif;
-    margin: 50px 0px 50px 0px;
-    font-size: 1.4rem;
-}
-
-#trd .top .box3 a {
-    padding: 7px;
-    border-radius: 10px;
-    border: 0px;
-    font-size: 1.2rem;
-    font-family: 'ABeeZee', sans-serif;
-    background-color: #D82424;
-    color: white;
-    display: inline-block;
-    margin-bottom: 2rem;
-}
-
-#trd .top .box3 a i {
-    vertical-align: middle;
-    font-size: 1.5rem;
-}
-
-/* designing the bottom one */
-
-#trd .bottom {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-}
-
-#trd .in {
-    background-color: #003A5B;
-    width: 80vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 20px;
-    color: white;
-    margin: 0px 0px 30px 0px;
-    flex-wrap: wrap;
-}
-
-#trd .bottom .in .img {
-    width: 500px;
-    height: 200px;
-    background-image: url(images/lfsfront.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    margin: 20px 10px 20px 5px;
-}
-
-#trd .bottom .in .text h1 {
-    font-family: 'Teko', sans-serif;
-    letter-spacing: 5px;
-    font-size: 3rem;
-}
-
-@media screen and (max-width:1134px) {
-    #trd .bottom .in .text {
-        text-align: center;
-    }
-}
-
-#trd .bottom .in .text h1 span {
-    color: yellow;
-}
-
-#trd .bottom .in .text h3 {
-    font-family: 'Suez One', serif;
-    font-weight: lighter;
     font-size: 1rem;
+    padding-top: 2rem ;
+    border-bottom: 1px solid white;
 }
-
-#trd .bottom .in .text a {
-    padding: 10px;
-    border-radius: 20px;
-    border: 0px;
-    display: inline-block;
-    font-size: 0.9rem;
-    color: white;
-    background-color: #D82424;
-    transition: 0.6s;
-    margin: 0px 5px 10px 5px;
+footer .fandc .credit h1:nth-child(1){
+    font-size: 4rem;
+    font-family: var(--font);
 }
-
-#trd .bottom .in .text a:hover {
-    box-shadow: 0px 0px 40px crimson;
-}
-
-/* designing the fourth page */
-
-body #frt {
-    width: 100vw;
-    height: auto;
-    background: linear-gradient(180deg, #014360 53.11%, #FFFFFF 53.12%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-}
-
-#frt .alumni {
-    width: 570px;
-    max-width: 570px;
-    min-width: 100px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: #014360;
-}
-
-#frt .alumni .text {
-    height: auto;
-    background-color: #014360;
-}
-
-#frt .alumni .text h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #9F9F9F;
-}
-
-#frt .alumni .text h1 {
-    color: white;
-    font-family: 'Satisfy', cursive;
-    font-size: 3rem;
-}
-
-#frt .alumni .text h1 span {
-    color: #08DA2A;
-}
-
-/* ------------------------------------------------------------------------------------------- */
-
-#frt .alumni .text .frame {
-    width: 100vw;
-    height: 250px;
-    background-color: #00445a;
-    border-radius: 20px;
-    position: relative;
-    max-width: 550px;
-    min-width: 200px;
-}
-
-#frt .alumni .text .frame .imgso {
-    width: 75px;
-    height: 75px;
-    background-image: url(images/baburam.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-}
-
-#frt .alumni .text .frame .name {
-    position: absolute;
-    left: calc(2% + 80px);
-    font-size: 1.5rem;
-    top: 28px;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#frt .alumni .text .frame .text {
-    max-width: 600px;
-    position: absolute;
-    min-width: 20vw;
-    top: 90px;
-    left: 2%;
-    word-wrap: break-word;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    word-wrap: break-word;
-}
-
-#frt .alumni .text .frame .stars {
-    display: block;
-    position: absolute;
-    top: 190px;
-    left: 3%;
-}
-
-#frt .alumni .text .frame .stars i {
-    color: rgb(175, 255, 25);
-}
-
-#frt .img {
-    width: 700px;
-    height: 80vh;
-    background-image: url(images/streading.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 20px;
-    flex: 2 450px;
-    position: relative;
-    margin-top: 20px;
-    max-width: 700px;
-}
-
-#frt .img .text {
-    position: absolute;
-    width: 250px;
-    height: 70px;
-    background-color: #770202;
-    top: 2%;
-    left: 2%;
-    border-radius: 10px;
-    text-align: center;
-    font-family: 'Satisfy', cursive;
-    color: white;
-}
-
-#frt .img .text i {
-    font-size: 2.5rem;
-    color: white;
-    margin: 2px 0px 0px 2px;
-    vertical-align: middle;
-}
-
-/* designing the our team page---------------------------------- */
-
-body #team {
-    width: 100vw;
-    height: auto;
-    overflow-x: scroll;
-
-}
-body #team::-webkit-scrollbar {
-    width: 20px;
-    height: 10px;
-    background-color: #003A5B;
-}
-body #team::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 143, 238);
-    outline: 1px solid slategrey;
-  }
-@media screen and (max-width:950px) {
-    body #team {
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-    }
-    body #team::-webkit-scrollbar {
-        display: none;
-    }
-}
-#team h1 {
-    margin: 20px;
-}
-
-#team .frame {
-    width: 1800px;
-    display: flex;
-    align-items: top;
-    justify-content: space-around;
-}
-
-#team .frame .cards {
-    width: 230px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: rgb(105, 105, 105);
-}
-
-#team .frame .cards img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-
-#team h2 {
-    color: black;
-}
-
-/* ------------------------------------------------------------------------------------------- */
-
-body #news {
-    width: 100vw;
-    height: auto;
-}
-
-#news .text {
-    margin: 10px;
-}
-
-#news .text h2 {
-    font-family: 'Scheherazade', serif;
-    font-size: 2rem;
-}
-
-#news .text h1 {
-    font-size: 3rem;
-    font-family: 'Rouge Script', cursive;
-}
-
-#news .news {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    flex-basis: auto;
-}
-
-#news .news .n1, .n2, .n3 {
-    width: auto;
-    height: 75vh;
-    margin: 5px;
-}
-
-#news .news .n1 img {
-    max-width: 400px;
-    min-width: 350px;
-    height: 75vh;
-}
-
-#news .news .n2 img {
-    max-width: 400px;
-    height: 75vh;
-}
-
-#news .news .n3 img {
-    max-width: 400px;
-    height: 75vh;
-}
-
-/* ------------------------------------------------------------------------------------------ */
-
-footer {
-    width: 100vw;
-    height: auto;
-    min-height: 100vh;
-    background-color: #003F4D;
-}
-
-footer .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .img .imgs {
-    background-image: url(images/lfslogo.png);
-    background-size: cover;
-    background-position: center;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-}
-
-footer .cards {
-    margin-top: 20px;
-    display: flex;
-    height: auto;
-    align-items: top;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-footer .cards .ab {
-    width: 330px;
-    height: auto;
-    min-width: 100px;
-    margin: 20px 5px 20px 5px;
-}
-footer .cards .ab h1 {
-    font-family: "Great Vibes", cursive;
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-
-}
-
-footer .cards .ab h2 {
+footer .copywrite{
     font-size: 1.2rem;
-    font-family: 'Antic Slab', serif;
-    color: rgb(161, 161, 161);
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-footer .cards .ab .icons i {
-    color: #DFDFDF;
-    font-size: 2rem;
-    margin: 5px 1rem 0px 0px;
-}
-footer .cards .ab .icons i:first-child() {
-    color: blue;
-}
-
-footer .cards .ab .icons a i:last-child():hover {
-    color: rgb(0, 93, 243);
-}
-
-footer .cards .ab .icons i:nth-child(2) {
-    color: pink;
-}
-
-footer .cards .link {
-    width: 300px;
-    height: auto;
-    color: white;
-    margin: 20px 5px 20px 5px;
-    min-width: 300px;
-}
-
-footer .cards .link a {
-    text-decoration: none;
-    display: block;
-    font-size: 1.2rem;
-    color: #9F9F9F;
-    font-family: 'Antic Slab', serif;
-}
-
-footer .cards .link h1 {
-    font-family: 'EB Garamond', serif;
-    font-size: 2rem;
-    font-weight: lighter;
     text-align: center;
 }
+/*---------------------making website responsive------------------------*/
+/*for small size mobile*/
+@media only screen and (min-width:320px) and (max-width: 360px){
+    main #review .box .frev1 .text1{
+        font-size: 3.5vh;
+    }
+    main #review .box .frev2 .text1{
+        font-size: 3.5vh;
+    }
+    main #review .box .frev3 .text1{
+        font-size: 3.5vh;
+    }
+    footer .fandc .c h2{
+        font-size: 1rem;
+    }
+} 
+@media only screen and (min-width:361px) and (max-width: 411px){
+    main #review .box .frev1 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev2 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev3 .text1{
+        font-size: 3.7vh;
+    }
+}
+@media only screen and (min-width:412px) and (max-width: 767px){
+    main #review .box .frev1 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev2 .text1{
+        font-size: 3.5vh;
+    }
+    main #review .box .frev3 .text1{
+        font-size: 3.7vh;
+    }
+}
+@media only screen and (min-width:767px) and (max-width: 1023px){
+    main #review .box .frev1 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev2 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev3 .text1{
+        font-size: 3.7vh;
+    }
+    header nav .navbar .links ul li a{
+        font-size: 1.8rem;
+    }
+    header .title h1{
+        font-size: 4.5rem;
+    }
+    main #third .main_t .text_t{
+        font-size: 2vw;
+    }
 
-footer .cards .adds {
-    width: 300px;
-    height: auto;
-    color: white;
-    margin: 20px 5px 20px 5px;
-    min-width: 300px;
+
+}
+/*_________This is only for pro__________*/
+@media only screen and (width:1024px) and (height: 1366px){
+    html{
+        font-size: 20px;
+    }
+    main #review .box .frev1 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev2 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev3 .text1{
+        font-size: 3.7vh;
+    }
+    header nav .navbar .links ul li a{
+        font-size: 1.8rem;
+        margin-left: 2rem;
+    }
+    header .title h1{
+        font-size: 4.5rem;
+    }
+    main #third .main_t .text_t{
+        font-size: 1.5vw;
+    }
+
+
+}
+/*This is for laptop*/
+@media only screen and (min-width:1024px) and (max-width: 1439px){
+    main #review .box .frev1 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev2 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev3 .text1{
+        font-size: 3.7vh;
+    }
+    header nav .navbar .links ul li a{
+        font-size: 1.8rem;
+        margin-left: 2rem;
+    }
+    header .title h1{
+        font-size: 4.5rem;
+    }
+    main #third .main_t .text_t{
+        font-size: 1.5vw;
+    }
+    footer .fandc .f{
+        width: 45vw;
+        height: auto;
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+        border-bottom:0px solid white;
+    }
+    footer .fandc{   
+        width: 50vw;
+        height: auto;
+    }
+    footer .fandc{                           /*here is the code */
+        width: 100vw;
+        height: auto;
+        padding-top: 3rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
+@media only screen and (min-width:1440px) and (max-width: 1000000px){
+    main #review .box .frev1 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev2 .text1{
+        font-size: 3.7vh;
+    }
+    main #review .box .frev3 .text1{
+        font-size: 3.7vh;
+    }
+    header nav .navbar .links ul li a{
+        font-size: 1.8rem;
+        margin-left: 2rem;
+    }
+    header .title h1{
+        font-size: 4.5rem;
+    }
+    main #third .main_t .text_t{
+        font-size: 1.5vw;
+    }
+    footer .fandc .f{
+        width: 45vw;
+        height: auto;
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+        border-bottom:0px solid white;
+    }
+    footer .fandc{   
+        width: 50vw;
+        height: auto;
+    }
+    footer .fandc{                           /*here is the code */
+        width: 100vw;
+        height: auto;
+        padding-top: 3rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    main #third .main_t .hire h1{
+        font-size: 5rem;
+        font-family: var(--font);
+        color: whitesmoke;
+    }
+    main #third .main_t .hire .fb ,.sb{
+        font-size: 3rem;
+        padding: 1rem 2rem;
+        margin-top: 1vh;
+        color: white;
+        border-radius: 20px;
+        border: 0px;
+        background-color: ;
 }
 
-footer .cards .adds h1 {
-    font-family: 'EB Garamond', serif;
-    font-size: 2rem;
-    font-weight: lighter;
-    text-align: center;
 }
 
-footer .cards .adds .head1, .head2, .head3 {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 0.2fr 1fr;
-}
-
-footer .cards .adds .head1 i, .head2 i, .head3 i {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    font-size: 2rem;
-    color: rgb(255, 255, 255);
-}
-
-footer .cards .adds .head3 h3 a {
-    text-decoration: none;
-    color: rgb(124, 121, 121);
-}
-footer .cards .adds .head1 {
-    color: #969696;
-}
-footer .cards .adds .head2 {
-    color: #969696;
-}
-footer .cards .adds .head3 {
-    color: #969696;
-}
-/* making website responsive */
-
-@media screen and (max-width:880px) and (min-width:460px) {
-    #f_page .topline .cam .img {
-        width: 3.3rem;
-        height: 4rem;
-    }
-    #f_page .topline .cam .text h1 {
-        font-size: 3.4vw;
-    }
-    #f_page .topline .cam .text h3 {
-        font-size: 1vw;
-    }
-    #f_page .topline .lfs h1 {
-        font-size: 4.3vw;
-    }
-    #f_page .topline .lfs .img {
-        width: 4rem;
-        height: 4rem;
-    }
-}
-
-@media screen and (max-width:460px) {
-    #f_page .topline .cam .img {
-        max-width: 61px;
-        min-width: 45px;
-        max-height: 64px;
-        min-height: 47.5px;
-        width: 12vw;
-        height: 13vw;
-    }
-    #f_page .topline .cam .text h1 {
-        font-size: 5vw;
-    }
-    #f_page .topline .cam .text h3 {
-        font-size: 1vw;
-    }
-    #f_page .topline .lfs h1 {
-        font-size: 6.5vw;
-    }
-    #f_page .topline .lfs .img {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-}
-
-/* top line made responsive */
